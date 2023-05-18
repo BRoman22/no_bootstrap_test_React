@@ -1,0 +1,145 @@
+.modal-wrapper {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+.overlay {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.overlay::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__body {
+  width: 500px;
+  padding: 90px 90px;
+  background-color: white;
+  z-index: 1;
+  position: relative;
+}
+
+.logo {
+  width: 200px;
+}
+
+.logo_place_modal {
+  display: block;
+  margin: 20px auto 40px;
+}
+
+.modal__title {
+  line-height: 30px;
+  font-size: 30px;
+  font-weight: normal;
+  margin-bottom: 30px;
+  text-align: center;
+  color: black;
+}
+
+.modal__text {
+  line-height: 15px;
+  font-size: 15px;
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+  border: none;
+  padding: 0;
+  color: black;
+}
+
+.modal__close {
+  display: block;
+  background-image: url(../../images/close_cross_icon.png);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background-color: white;
+}
+
+.modal__close_place {
+  position: absolute;
+  top: 35px;
+  right: 40px;
+}
+
+.modal__input-wrapper {
+  position: relative;
+}
+
+.modal__input,
+.modal__button {
+  width: 320px;
+  height: 55px;
+  border: 1px solid #59BD5A;
+  line-height: 24px;
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.error {
+  border: 1px solid red;
+}
+
+.error::placeholder {
+  color: red;
+}
+
+.modal__input:focus {
+  outline: none;
+}
+
+.modal__show-password {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  bottom: 36px;
+  right: 20px;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background-color: white;
+}
+
+.modal__show-password_hide {
+  background-image: url(../../images/close_eye.png);
+}
+
+.modal__show-password_show {
+  background-image: url(../../images/open_eye.png);
+}
+
+.modal__button {
+  cursor: pointer;
+}
+
+.modal__error-message {
+  position: absolute;
+  bottom: 0;
+  color: red;
+}
+
+.modal__text_button-registration {
+  color: #59BD5A;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 6px;
+}

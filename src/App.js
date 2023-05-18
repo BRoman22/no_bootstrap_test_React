@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useCallback, useState } from 'react';
+import './pages/index.css';
+import Header from './components/header/Header';
+import Cards from './components/cards/Cards';
+import LoginModal from './components/modal/LoginModal';
+import RegistrationModal from './components/modal/RegistrationModal';
 
 function App() {
+  const [login, setLogin] = useState(false);
+  const [registration, setRegistration] = useState(false);
+  const toggleLogin = useCallback(() => setLogin((e) => !e), []);
+  const toggleRegistration = useCallback(() => setRegistration((e) => !e), []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header toggleLogin={toggleLogin} />
+      <main className="main">
+        <Cards />
+      </main>
+      {login === true && (
+        <LoginModal
+          toggleLogin={toggleLogin}
+          toggleRegistration={toggleRegistration}
+        />
+      )}
+      {registration && (
+        <RegistrationModal
+          toggleRegistration={toggleRegistration}
+          toggleLogin={toggleLogin}
+        />
+      )}
     </div>
   );
 }

@@ -1,0 +1,54 @@
+.header {
+  width: 100%;
+  height: 72px;
+  margin: auto;
+  padding: 0 81px;
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 16px rgba(38, 38, 38, 0.16);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.header__logo {
+  background-image: url(../../images/logo.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 14px;
+}
+
+.header__wrapper {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.header__login-button {
+  width: 78px;
+  height: 40px;
+  font-size: 13px;
+  line-height: 1.85;
+  font-weight: 500;
+  border: 1px solid #E0E0E0;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.header__basket {
+  display: block;
+  background-image: url(../../images/basket.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 19px;
+  height: 22px;
+  text-decoration: none;
+  cursor: pointer;
+}
